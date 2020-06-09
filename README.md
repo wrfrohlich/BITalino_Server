@@ -4,13 +4,13 @@ System for acquisition of the biosignals from BITalino board.
 ## Architecture:
 
 #### Ports:
->> Containers:
+Containers:
 
 * 18000 -> Web / Dashboard (Grafana)
 
 * 18001 -> Database (PostgreSQL)
 
->> Communications:
+Communications:
 
 * 18100 ->
 
@@ -23,3 +23,8 @@ System for acquisition of the biosignals from BITalino board.
 #### Using the Database:
 
 #### Using the Grafana:
+
+
+```c++
+def
+```
