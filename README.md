@@ -3,6 +3,10 @@ System for acquisition of the biosignals from BITalino board.
 
 ## Architecture:
 
+#### Topology:
+
+`teste`
+
 #### Ports:
 Containers:
 
