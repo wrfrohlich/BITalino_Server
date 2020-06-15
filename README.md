@@ -65,15 +65,21 @@ First of all is necessary install and configure the libraries.
 
 * Install Docker Compose: `sudo pip3 install docker-compose`
 
-#### 2.2 - Using the Bluetooth and Acquisition:
+#### 2.2 - Using the Docker Compose:
 
-The first step to use the application it is define the bluetooth address in the acquisition.cpp file in the variable `BITalino dev("xx:xx:xx:xx:xx:xx")`. In the acquisition.cpp file there are others options to configure the system, for example the channels that will be monitored (channel 1 = ECG; channel 2 = EDA; channel 3 = EMG) or the port of the sockets.
+After to prepare the enviroment to use the docker compose it is necessary to run the containers to start the database and dashboard
 
-The next step must change the path in the bash to the path with all files, now it is possible generate the executable file using the command `make`. After this, the application is able to use with the command `./acquisition`.
+#### 2.3 - Using the Database (__PostgreSQL__):
 
-#### 2.3 - Using the Database:
+#### 2.4 - Using the Dashboard (__Grafana__):
 
-#### 2.4 - Using the Grafana:
+#### 2.5 - Using the Processing (__Python__):
+
+#### 2.5 - Using the Acquisition (__C++__):
+
+The first step to use the application it is define the bluetooth address in the acquisition.cpp file in the variable `BITalino dev("xx:xx:xx:xx:xx:xx")`. In the acquisition.cpp file there are others options to configure the system, for example the channels that will be monitored (channel 1 = ECG; channel 2 = EDA; channel 3 = EMG) or the port of the sockets, all these options are described in the code.
+
+The next step must change the path in the bash to the path with all files, now it is possible generate the executable file using the command `make`. After this, the application is able to use with the command `./acquisition`. Turn on the BITalino and fill  name and last name to start the acquisition. To finish the acquisition it is necessary tap the 'enter' in the keyboard to stop the acquisition and disconnect properly the BITalino.
 
 ## 3 - Useful Commands
 
