@@ -71,9 +71,11 @@ After to prepare the enviroment to use the docker compose it is necessary to run
 
 #### 2.3 - Using the Database (__PostgreSQL__):
 
-Inside the folder 'database', there are two files, the first file is used to inicialize the database `'bitalino'` and the table `'patients'` with categories `'name'`, `'ecg'` and `'eda'`. The second file is used to check if the database and table was created properly. This database created use the exposed port `18001`, user `postgres` and the password is not defined.
+Inside the folder 'database' there are two files, the first file is used to inicialize the database `'bitalino'` and the table `'patients'` with categories `'name'`, `'ecg'` and `'eda'`. The second file is used to check if the database and table was created properly. This database created use the exposed port `18001`, user `postgres` and the password is not defined.
 
 #### 2.4 - Using the Dashboard (__Grafana__):
+
+Inside the folder 'web' there are other two folders. The folder 'datasources' there is the file (datasource.yaml) with the configuration of the database (PostgreSQL) that will be used to get the data to monitoring. The folder 'dashboards' there are two files, the first file (dashboard.yaml) is used to configure the dashboard properly and the second file (Patients.json) is used to have the dashboard entirely configured.
 
 #### 2.5 - Using the Processing (__Python__):
 
