@@ -71,7 +71,7 @@ After to prepare the enviroment to use the docker compose it is necessary to run
 
 #### 2.3 - Using the Database (__PostgreSQL__):
 
-Inside the folder 'database', there are two files, the first file is used to inicialize the database 'bitalino' and the table 'patients' with columns 'name', 'ecg' and 'eda'. The second file is used to check if the database and table was created properly. This database created use the exposed port `18000`, user `postgres` and the password is not defined.
+Inside the folder 'database', there are two files, the first file is used to inicialize the database `'bitalino'` and the table `'patients'` with categories `'name'`, `'ecg'` and `'eda'`. The second file is used to check if the database and table was created properly. This database created use the exposed port `18001`, user `postgres` and the password is not defined.
 
 #### 2.4 - Using the Dashboard (__Grafana__):
 
