@@ -79,6 +79,8 @@ Inside the folder 'web' there are other two folders. The folder 'datasources' th
 
 #### 2.5 - Using the Processing (__Python__):
 
+Inside the folder 'processing' there are two files, the first file (start_processing.sh) is used to download the necessary libraries
+
 #### 2.5 - Using the Acquisition (__C++__):
 
 The first step to use the application it is define the bluetooth address in the acquisition.cpp file in the variable `BITalino dev("xx:xx:xx:xx:xx:xx")`. In the acquisition.cpp file there are others options to configure the system, for example the channels that will be monitored (channel 1 = ECG; channel 2 = EDA; channel 3 = EMG) or the port of the sockets, all these options are described in the code.
