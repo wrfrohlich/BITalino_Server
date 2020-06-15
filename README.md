@@ -79,7 +79,10 @@ Inside the folder 'web' there are other two folders. The folder 'datasources' th
 
 #### 2.5 - Using the Processing (__Python__):
 
-Inside the folder 'processing' there are two files, the first file (start_processing.sh) is used to download the necessary libraries
+Inside the folder 'processing' there are two files, the first file (start_processing.sh) is used to download the necessary libraries, after the download the second line call the other file (processing.py). The python code has the goal to receive all data from the C++ code via socket, the python code opens UDP sockets as server.
+
+In the first part of the code are defined the libraries, in the second part are difined the global variables of the code, the function `socket.socket(socket.AF_INET, socket.SOCK_DGRAM)` define the protocol and `bind('',18101)` is used to define the IP address and the port of the socket server.
+
 
 #### 2.5 - Using the Acquisition (__C++__):
 
