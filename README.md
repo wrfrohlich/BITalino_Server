@@ -1,20 +1,20 @@
 # BITalino Server
 System for acquisition of the biosignals from BITalino board.
 
-## Architecture:
+## 1 - Architecture:
 
-#### Topology:
+#### 1.1 - Topology:
 
-`teste`
+![ScreenShot](https://github.com/wrfrohlich/BITalino_Server/blob/V1.0/figures/Topology.png)
 
-#### Ports:
-Containers:
+#### 1.2 - Ports:
+1.2.1 - Containers:
 
 * 18000 -> Web / Dashboard (Grafana)
 
 * 18001 -> Database (PostgreSQL)
 
-Communications:
+1.2.2 - Communications:
 
 * 18100 -> Control Variable / Socket between Acquisition application and Processing application
 
@@ -30,13 +30,46 @@ Communications:
 
 * 18106 -> EDA Variable / Socket between Acquisition application and Processing application
 
-## How to use this project:
+## 2 - How to use this project:
 
-#### Using the Bluetooth and Acquisition:
+#### 2.1 - Prepare the enviroment:
+First of all is necessary install and configure the libraries.
 
-#### Using the Database:
+2.1.1 - Bluetooth:
 
-#### Using the Grafana:
+* Install the bluetooth library: `sudo apt-get install pi-bluetooth`
 
-## Useful Commands
+* Start the configuration: `sudo bluetoothctl`
+
+* Scan to find bluetooth MAC ID: `scan on`
+
+* Connect with the device: `pair xx:xx:xx:xx:xx:xx`
+
+2.1.2 - Docker:
+
+* Install the docker: `curl -sSL https://get.docker.com | sh`
+
+* Add the user: `sudo usermod -aG docker pi`
+
+* Enable the docker to start with the system: `sudo systemctl enable docker`
+
+* Restart the system: `sudo reboot -h now`
+
+2.1.3 - Docker Compose:
+
+* Install the dependencies: `sudo apt-get install -y libffi-dev libssl-dev`
+
+* Install Python 3: `sudo apt-get install -y python3 python3-pip`
+
+* Install Docker Compose: `sudo pip3 install docker-compose`
+
+!!! Raspberry Pi uses the ARM architecture, so won't be compatible with all containers. Images will need to be built from an ARM base image !!!
+
+#### 2.2 - Using the Bluetooth and Acquisition:
+
+#### 2.3 - Using the Database:
+
+#### 2.4 - Using the Grafana:
+
+## 3 - Useful Commands
 
