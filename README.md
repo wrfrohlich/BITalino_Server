@@ -47,6 +47,8 @@ First of all is necessary install and configure the libraries.
 
 2.1.2 - Docker:
 
+!!! Raspberry Pi uses the ARM architecture, so won't be compatible with all containers. Images need to be built from an ARM base !!!
+
 * Install the docker: `curl -sSL https://get.docker.com | sh`
 
 * Add the user: `sudo usermod -aG docker pi`
@@ -62,8 +64,6 @@ First of all is necessary install and configure the libraries.
 * Install Python 3: `sudo apt-get install -y python3 python3-pip`
 
 * Install Docker Compose: `sudo pip3 install docker-compose`
-
-!!! Raspberry Pi uses the ARM architecture, so won't be compatible with all containers. Images will need to be built from an ARM base image !!!
 
 #### 2.2 - Using the Bluetooth and Acquisition:
 
