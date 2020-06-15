@@ -41,7 +41,7 @@ First of all it is necessary install and configure the libraries.
 
 * Start the configuration: `sudo bluetoothctl`
 
-* Scan to find bluetooth MAC ID: `scan on`
+* Scan to find bluetooth address: `scan on`
 
 * Connect with the device: `pair xx:xx:xx:xx:xx:xx`
 
