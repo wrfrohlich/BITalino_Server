@@ -106,12 +106,13 @@ The next step must change the path in the bash to the path with all files, now i
 * Remove Networks: `docker image rm xxxxxx`
 
 #### 3.2 - Advanced Commands
-
-* Down Docker-Compose: `docker-compose down`
-
 * Up Docker-Compose with Logs: `docker-compose up`
 
 * Up Docker-Compose without Logs: `docker-compose up -d`
+
+* Check Docker-Compose: `docker-compose ps`
+
+* Down Docker-Compose: `docker-compose down`
 
 * Logs of Docker-Compose: `docker-compose logs -t -f`
 
