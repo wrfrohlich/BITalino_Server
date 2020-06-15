@@ -32,7 +32,7 @@ System for acquisition of the biosignals from BITalino board.
 
 ## 2 - How to use this project:
 
-#### 2.1 - Prepare the enviroment:
+#### 2.1 - Preparing the enviroment:
 First of all is necessary install and configure the libraries.
 
 2.1.1 - Bluetooth:
@@ -66,6 +66,10 @@ First of all is necessary install and configure the libraries.
 * Install Docker Compose: `sudo pip3 install docker-compose`
 
 #### 2.2 - Using the Bluetooth and Acquisition:
+
+The first step to use the application it is define the bluetooth address in the acquisition.cpp file in the variable `BITalino dev("xx:xx:xx:xx:xx:xx")`. In the acquisition.cpp file there are others options to configure the system, for example the channels that will be monitored (channel 1 = ECG; channel 2 = EDA; channel 3 = EMG) or the port of the sockets.
+
+The next step must change the path in the bash to the path with all files, now it is possible generate the executable file using the command `make`. After this, the application is able to use with the command `./acquisition`.
 
 #### 2.3 - Using the Database:
 
