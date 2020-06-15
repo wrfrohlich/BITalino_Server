@@ -33,7 +33,7 @@ System for acquisition of the biosignals from BITalino board.
 ## 2 - How to use this project:
 
 #### 2.1 - Preparing the enviroment:
-First of all is necessary install and configure the libraries.
+First of all it is necessary install and configure the libraries.
 
 2.1.1 - Bluetooth:
 
