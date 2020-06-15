@@ -120,3 +120,7 @@ The next step must change the path in the bash to the path with all files, now i
 * Logs of Database Application: `docker-compose logs -t -f database`
 
 * Logs of Dashboard Application: `docker-compose logs -t -f web`
+
+* Check the Creation of Database: `docker-compose exec database psql -U postgres -f ./database/check.sql`
+
+* Check the Database: `docker-compose exec database psql -U postgres -d bitalino -c 'select * from patients'`
