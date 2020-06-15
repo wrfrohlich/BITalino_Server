@@ -67,7 +67,7 @@ First of all it is necessary install and configure the libraries.
 
 #### 2.2 - Using the Docker Compose:
 
-After to prepare the enviroment to use the docker compose it is necessary to run the containers to start the database and dashboard
+After to prepare the enviroment to use the docker compose it is necessary to run the containers to start the application to processing the data, the database and the dashboard. For this, the bash must be change in the path with the files of this project, in sequence using `cd Docker` and `docker-compose up -d` to run the containers. 
 
 #### 2.3 - Using the Database (__PostgreSQL__):
 
@@ -83,3 +83,40 @@ The next step must change the path in the bash to the path with all files, now i
 
 ## 3 - Useful Commands
 
+#### 3.1 - Basic Commands
+
+* List Images: `docker image ls`
+
+* List Containers: `docker container ls -a`
+
+* List Volumes: `docker volume ls`
+
+* List Networks: `docker network ls`
+
+* Remove Unnecessary Volumes: `docker volume prune`
+
+* Remove Unnecessary Networks: `docker network prune`
+
+* Remove Images: `docker image rm xxxxxx`
+
+* Remove Containers: `docker image rm xxxxxx`
+
+* Remove Volumes: `docker image rm xxxxxx`
+
+* Remove Networks: `docker image rm xxxxxx`
+
+#### 3.2 - Advanced Commands
+
+* Down Docker-Compose: `docker-compose down`
+
+* Up Docker-Compose with Logs: `docker-compose up`
+
+* Up Docker-Compose without Logs: `docker-compose up -d`
+
+* Logs of Docker-Compose: `docker-compose logs -t -f`
+
+* Logs of Processing Application: `docker-compose logs -t -f processing`
+
+* Logs of Database Application: `docker-compose logs -t -f database`
+
+* Logs of Dashboard Application: `docker-compose logs -t -f web`
