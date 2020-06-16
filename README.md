@@ -9,6 +9,8 @@ This topic introduce the project developed, describing each part of the topology
 ![Topology](https://github.com/wrfrohlich/BITalino_Server/blob/V1.0/figures/Topology.png)
 
 #### 1.2 - Ports:
+In this project all ports are defined, including ports for future applications as acquisition of more signals, such as EMG and EEG. All code is prepared to expansion and improvement.
+
 1.2.1 - Containers:
 
 * 18000 -> Web / Dashboard (Grafana)
