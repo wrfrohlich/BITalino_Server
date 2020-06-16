@@ -2,10 +2,11 @@
 System for acquisition of the biosignals from BITalino board.
 
 ## 1 - Architecture:
+This topic introduce the project developed, describing each part of the topology and how the data flows. This project has as objective to implement a system for acquisition of the biosignals from the BITalino board via bluetooth, these signals are received and processed, after the processing, the data is stored in the database and can be viewed in a web dashboard.
 
 #### 1.1 - Topology:
 
-![ScreenShot](https://github.com/wrfrohlich/BITalino_Server/blob/V1.0/figures/Topology.png)
+![Topology](https://github.com/wrfrohlich/BITalino_Server/blob/V1.0/figures/Topology.png)
 
 #### 1.2 - Ports:
 1.2.1 - Containers:
@@ -31,9 +32,10 @@ System for acquisition of the biosignals from BITalino board.
 * 18106 -> EDA Variable / Socket between Acquisition application and Processing application
 
 ## 2 - How to use this project:
+In this section is presented how to use this project. In the first part is introduced how to prepare the enviroment to be ready to apply the project. In the next step is presented how to use and modify each service/application.
 
 #### 2.1 - Preparing the enviroment:
-First of all it is necessary install and configure the libraries.
+First of all it is necessary install and configure the libraries for the environment are ready to applications.
 
 2.1.1 - Bluetooth:
 
@@ -47,7 +49,7 @@ First of all it is necessary install and configure the libraries.
 
 2.1.2 - Docker:
 
-!!! Raspberry Pi uses the ARM architecture, so won't be compatible with all containers. Images need to be built from an ARM base !!!
+!!! Raspberry Pi uses the ARM architecture, so will not be compatible with all containers. Images need to be built from an ARM base !!!
 
 * Install the docker: `curl -sSL https://get.docker.com | sh`
 
@@ -94,10 +96,9 @@ The first step to use the application it is define the bluetooth address in the 
 
 The next step must change the path in the bash to the path with all files, now it is possible generate the executable file using the command `make`. After this, the application is able to use with the command `./acquisition`. Turn on the BITalino and fill  name and last name to start the acquisition. To finish the acquisition it is necessary tap the 'enter' in the keyboard to stop the acquisition and disconnect properly the BITalino.
 
-## 3 - Useful Commands
+## 3 - Useful Commands:
 
-#### 3.1 - Basic Commands
-
+#### 3.1 - Basic Commands:
 * List Images: `docker image ls`
 
 * List Containers: `docker container ls -a`
@@ -118,7 +119,7 @@ The next step must change the path in the bash to the path with all files, now i
 
 * Remove Networks: `docker image rm xxxxxx`
 
-#### 3.2 - Advanced Commands
+#### 3.2 - Advanced Commands:
 * Up Docker-Compose with Logs: `docker-compose up`
 
 * Up Docker-Compose without Logs: `docker-compose up -d`
