@@ -67,11 +67,13 @@ First of all it is necessary install and configure the libraries.
 
 #### 2.2 - Using the Docker Compose:
 
-After to prepare the enviroment to use the docker compose it is necessary to run the containers to start the application to processing the data, the database and the dashboard. For this, the bash must be change in the path with the files of this project, in sequence using `cd Docker` and `docker-compose up -d` to run the containers. 
+After to prepare the enviroment to use the docker compose it is necessary to run the containers to start the application to processing the data, the database and the dashboard. The file that defines the parameters for each service is the 'docker-compose.yml', in this file is defined the network amoung services that will be the `'my-network'` with brigde caracteristic. In the next topic is defined the service, for each service is assigned an image that will be based, for the web service will be used the image `grafana/grafana:7.0.0`, the service database will use the image `postgres:9.6` and the processing service will use the image `python:3.8.3`.
+
+In each service, also is declareted different ports with external visibility. To run the docker compose the path must be changed in the bash with to the folder that are the files of this project, in sequence using `cd Docker` and `docker-compose up -d` to run the containers.
 
 #### 2.3 - Using the Database (__PostgreSQL__):
 
-Inside the folder 'database' there are two files, the first file is used to inicialize the database `'bitalino'` and the table `'patients'` with categories `'name'`, `'ecg'` and `'eda'`. The second file is used to check if the database and table was created properly. This database created use the exposed port `18001`, user `postgres` and the password is not defined.
+Inside the folder 'database' there are two files, the first file is used to inicialize the database `'bitalino'` and the table `'patients'` with categories `'name'`, `'ecg'`, `'eda'` and `'time'`. The second file is used to check if the database and table was created properly. This database created use the exposed port `18001`, user `postgres` and the password is not defined.
 
 #### 2.4 - Using the Dashboard (__Grafana__):
 
@@ -81,7 +83,9 @@ Inside the folder 'web' there are other two folders. The folder 'datasources' th
 
 Inside the folder 'processing' there are two files, the first file (start_processing.sh) is used to download the necessary libraries, after the download the second line call the other file (processing.py). The python code has the goal to receive all data from the C++ code via socket, the python code opens UDP sockets as server.
 
-In the first part of the code are defined the libraries, in the second part are difined the global variables of the code, the function `socket.socket(socket.AF_INET, socket.SOCK_DGRAM)` define the protocol and `bind('',18101)` is used to define the IP address and the port of the socket server.
+In the first part of the code are defined the libraries, in the second part are difined the global variables of the code, the function `socket.socket(socket.AF_INET, socket.SOCK_DGRAM)` define the protocol and `bind('',18101)` is used to define the IP address and port of the socket server. In the third part of the code is defined the functions, in this part there is the `'register_datasabe'` function used to make the connection with the database and post the data. The variable `DSN = 'dbname=bitalino user=postgres host=database'` define the database, user and host that will be used and the variable `SQL = 'INSERT INTO patients (name, ecg, eda, time) VALUES (%s, %s, %s, %s)'` define what it is the table that will be saved all data and categories.
+
+Finally, in the fourth part is the main function, a loop that opens the socket and receives the information from the acquisition application. Each data is received from a different ports and theses data is received and converted into information in the correct format. After all data are received, the program call the function `'register_datasabe'` to make the connection with the database and post the data.
 
 
 #### 2.5 - Using the Acquisition (__C++__):
