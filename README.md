@@ -81,7 +81,7 @@ Inside the folder 'database' there are two files, the first file is used to inic
 
 #### 2.4 - Using the Dashboard (__Grafana__):
 
-Inside the folder 'web' there are other two folders. The folder 'datasources' there is the file (datasource.yaml) with the configuration of the database (PostgreSQL) that will be used to get the data to monitoring. The folder 'dashboards' there are two files, the first file (dashboard.yaml) is used to configure the dashboard properly and the second file (Patients.json) is used to have the dashboard entirely configured.
+Inside the folder 'web' there are other two folders. The folder 'datasources' there is the file (datasource.yaml) with the configuration of the database (PostgreSQL) that will be used to get the data to monitoring. The folder 'dashboards' there are two files, the first file (dashboard.yaml) is used to configure the dashboard properly and the second file (Patients.json) is used to have the dashboard entirely configured. To access the dashboard use the Raspberry's IP and port `18000` (e.g. 127.0.0.1:18000).
 
 #### 2.5 - Using the Processing (__Python__):
 
