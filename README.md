@@ -67,6 +67,10 @@ Inside the folder 'database' there are two files, the first file is used to inic
 
 Inside the folder 'web' there are other two folders. The folder 'datasources' there is the file (datasource.yaml) with the configuration of the database (PostgreSQL) that will be used to get the data to monitoring. The folder 'dashboards' there are two files, the first file (dashboard.yaml) is used to configure the dashboard properly and the second file (Patients.json) is used to have the dashboard entirely configured. To access the dashboard use the Raspberry's IP and port `18000` (e.g. 127.0.0.1:18000).
 
+After initialized the Grafana's container, it is necessary to set the dashboard to visualize the database. By default the user and password are admin / admin, in the sequence you can define another password, all steps to set the predefined dashboard in the Grafana are list below in the figure.
+
+![Topology](https://github.com/wrfrohlich/BITalino_Server/blob/V1.0/figures/Grafana.png)
+
 #### 2.5 - Using the Processing (__Python__):
 
 Inside the folder 'processing' there are two files, the first file (start_processing.sh) is used to download the necessary libraries, after the download the second line call the other file (processing.py). The python code has the goal to receive all data from the C++ code via socket, the python code opens UDP sockets as server.
