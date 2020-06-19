@@ -69,7 +69,7 @@ Inside the folder 'web' there are other two folders. The folder 'datasources' th
 
 After initialized the Grafana's container, it is necessary to set the dashboard to visualize the database. By default the user and password are admin / admin, in the sequence you can define another password, all steps to set the predefined dashboard in the Grafana are list below in the figure.
 
-![Topology](https://github.com/wrfrohlich/BITalino_Server/blob/V1.0/figures/Grafana.png)
+![Topology](https://github.com/wrfrohlich/BITalino_Server/blob/V1.0/figures/Dashboard.png)
 
 #### 2.5 - Using the Processing (__Python__):
 
