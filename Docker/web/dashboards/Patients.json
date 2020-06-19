@@ -38,7 +38,7 @@
               }
             ]
           },
-          "unit": "bpm"
+          "unit": "none"
         },
         "overrides": []
       },
@@ -105,7 +105,7 @@
               }
             ]
           },
-          "unit": "siemens"
+          "unit": "none"
         },
         "overrides": []
       },
