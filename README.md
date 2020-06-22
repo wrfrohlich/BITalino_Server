@@ -59,13 +59,13 @@ After to prepare the enviroment to use the docker compose it is necessary to run
 
 In each service, also is declareted different ports with external visibility. To run the docker compose the path must be changed in the bash with to the folder that are the files of this project, in sequence using `cd Docker` and `docker-compose up -d` to run the containers.
 
-![Docker-compose](https://github.com/wrfrohlich/BITalino_Server/blob/V1.0/figures/Database-Log.jpg)
+![Docker-compose](https://github.com/wrfrohlich/BITalino_Server/blob/V1.0/figures/Docker-compose.png)
 
 #### 2.3 - Using the Database (__PostgreSQL__):
 
 Inside the folder 'database' there are two files, the first file is used to inicialize the database `'bitalino'` and the table `'patients'` with categories `'name'`, `'ecg'`, `'eda'` and `'time'`. The second file is used to check if the database and table was created properly. This database created use the exposed port `18001`, user `postgres` and the password is not defined.
 
-![Docker-compose](https://github.com/wrfrohlich/BITalino_Server/blob/V1.0/figures/Docker-compose.png)
+![Database-Log](https://github.com/wrfrohlich/BITalino_Server/blob/V1.0/figures/Database-Log.jpg)
 
 #### 2.4 - Using the Dashboard (__Grafana__):
 
@@ -83,7 +83,7 @@ In the first part of the code are defined the libraries, in the second part are 
 
 Finally, in the fourth part is the main function, a loop that opens the socket and receives the information from the acquisition application. Each data is received from a different ports and theses data is received and converted into information in the correct format. After all data are received, the program call the function `'register_datasabe'` to make the connection with the database and post the data.
 
-![Dashboard](https://github.com/wrfrohlich/BITalino_Server/blob/V1.0/figures/Processing-Log.png)
+![Processing-Log](https://github.com/wrfrohlich/BITalino_Server/blob/V1.0/figures/Processing-Log.png)
 
 #### 2.5 - Using the Acquisition (__C++__):
 
@@ -91,7 +91,7 @@ The first step to use the application it is define the bluetooth address in the 
 
 The next step must change the path in the bash to the path with all files, now it is possible generate the executable file using the command `make`. After this, the application is able to use with the command `./acquisition`. Turn on the BITalino and fill  name and last name to start the acquisition. To finish the acquisition it is necessary tap the 'enter' in the keyboard to stop the acquisition and disconnect properly the BITalino.
 
-![Dashboard](https://github.com/wrfrohlich/BITalino_Server/blob/V1.0/figures/Acquisition.png)
+![Acquisition](https://github.com/wrfrohlich/BITalino_Server/blob/V1.0/figures/Acquisition.png)
 
 ## 3 - Useful Commands:
 
