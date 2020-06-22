@@ -18,7 +18,7 @@ In this project all ports are defined and changed into other range to avoid conf
 * 18002 -> Processing (Python) - Socket between Acquisition application and Processing application
 
 ## 2 - How to use this project:
-In this section is presented how to use this project. In the first part is introduced how to prepare the enviroment to be ready to apply the project. In the next step is presented how to use and modify each service/application.
+In this section is presented how to use this project. In the first part is introduced how to install all dependencies and prepare the enviroment to be ready to apply the project. In the next step is presented how to use and modify each service/application.
 
 #### 2.1 - Preparing the enviroment:
 First of all it is necessary install and configure the libraries for the environment are ready to applications.
@@ -69,7 +69,7 @@ Inside the folder 'web' there are other two folders. The folder 'datasources' th
 
 After initialized the Grafana's container, it is necessary to set the dashboard to visualize the database. By default the user and password are admin / admin, in the sequence you can define another password, all steps to set the predefined dashboard in the Grafana are list below in the figure.
 
-![Topology](https://github.com/wrfrohlich/BITalino_Server/blob/V1.0/figures/Dashboard.png)
+![Dashboard](https://github.com/wrfrohlich/BITalino_Server/blob/V1.0/figures/Dashboard.png)
 
 #### 2.5 - Using the Processing (__Python__):
 
@@ -79,10 +79,9 @@ In the first part of the code are defined the libraries, in the second part are 
 
 Finally, in the fourth part is the main function, a loop that opens the socket and receives the information from the acquisition application. Each data is received from a different ports and theses data is received and converted into information in the correct format. After all data are received, the program call the function `'register_datasabe'` to make the connection with the database and post the data.
 
-
 #### 2.5 - Using the Acquisition (__C++__):
 
-The first step to use the application it is define the bluetooth address in the acquisition.cpp file in the variable `BITalino dev("xx:xx:xx:xx:xx:xx")`. In the acquisition.cpp file there are others options to configure the system, for example the channels that will be monitored (channel 1 = ECG; channel 2 = EDA; channel 3 = EMG) or the port of the sockets, all these options are described in the code.
+The first step to use the application it is define the bluetooth address in the acquisition.cpp file in the variable `BITalino dev("xx:xx:xx:xx:xx:xx")`. In the acquisition.cpp file there are others options to configure the system, for example the channels that will be monitored (channel 1 = ECG; channel 2 = EDA) or the port of the sockets, all these options are described in the code.
 
 The next step must change the path in the bash to the path with all files, now it is possible generate the executable file using the command `make`. After this, the application is able to use with the command `./acquisition`. Turn on the BITalino and fill  name and last name to start the acquisition. To finish the acquisition it is necessary tap the 'enter' in the keyboard to stop the acquisition and disconnect properly the BITalino.
 
