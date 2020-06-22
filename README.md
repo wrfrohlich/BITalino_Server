@@ -81,7 +81,7 @@ Inside the folder 'processing' there are two files, the first file (start_proces
 
 In the first part of the code are defined the libraries, in the second part are difined the global variables of the code, the function `socket.socket(socket.AF_INET, socket.SOCK_DGRAM)` define the protocol and `bind('',18002)` is used to define the IP address and port of the socket server. In the third part of the code is defined the functions, in this part there is the `'register_datasabe'` function used to make the connection with the database and post the data. The variable `DSN = 'dbname=bitalino user=postgres host=database'` define the database, user and host that will be used and the variable `SQL = 'INSERT INTO patients (name, ecg, eda, time) VALUES (%s, %s, %s, %s)'` define what it is the table that will be saved all data and categories.
 
-Finally, in the fourth part is the main function, a loop that opens the socket and receives the information from the acquisition application. Each data is received from a different ports and theses data is received and converted into information in the correct format. After all data are received, the program call the function `'register_datasabe'` to make the connection with the database and post the data.
+Finally, in the fourth part is the main function, a loop that opens the socket and receives the information from the acquisition application. Each data is received from the C++ code with a different caracter for identify the kind of data and is converted into the correct format. After all data are received, the program call the function `'register_datasabe'` to make the connection with the database and post the data.
 
 ![Processing-Log](https://github.com/wrfrohlich/BITalino_Server/blob/V1.0/figures/Processing-Log.png)
 
